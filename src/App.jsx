@@ -9,7 +9,7 @@ function App() {
   const [isOnline, setIsOnline] = useState(navigator.onLine);
   const [datosCargados, setDatosCargados] = useState(false);
 
-  // Detecta conexión/desconexión
+ 
   useEffect(() => {
     const handleOnline = () => setIsOnline(true);
     const handleOffline = () => setIsOnline(false);
@@ -23,7 +23,7 @@ function App() {
     };
   }, []);
 
-  // Carga propiedades (simula XML)
+ 
   useEffect(() => {
     loadProperties()
       .then((data) => {
@@ -48,7 +48,7 @@ function App() {
 
   return (
     <>
-      {/* ... tu header, main y footer igual que antes */}
+     
       <header
         className="fixed top-0 left-0 w-full bg-red-700 text-white p-4 shadow-lg flex justify-center items-center z-50"
         style={{ height: "4rem" }}
@@ -80,7 +80,7 @@ function App() {
         className="fixed bottom-0 left-0 w-full bg-red-700 text-white p-4 shadow-lg flex flex-wrap md:flex-nowrap justify-between items-center gap-4 text-sm z-50"
         style={{ height: "7rem" }}
       >
-        {/* ... footer igual que antes */}
+       
         <div className="flex flex-col md:flex-row md:items-center gap-2 md:gap-6 flex-1 min-w-[200px]">
           <img
             src="/top.png"
